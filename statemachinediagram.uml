@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_TQnowJVBEeuH9PQTbjfkOg" name="statemachine">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_TT93sJVBEeuH9PQTbjfkOg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_0NCmgJVBEeuH9PQTbjfkOg" name="StateMachine">
+    <region xmi:type="uml:Region" xmi:id="_0ZFecJVBEeuH9PQTbjfkOg">
+      <transition xmi:type="uml:Transition" xmi:id="_3hmKsJVFEeuH9PQTbjfkOg" source="_nVwVkJVCEeuH9PQTbjfkOg" target="_wlwhUJVCEeuH9PQTbjfkOg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Xa4IEJVUEeuH9PQTbjfkOg" name="No previous offence, 3rd party involvement" source="_xgFy4JVTEeuH9PQTbjfkOg" target="_7Wt5wJVTEeuH9PQTbjfkOg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_QPc_AJVbEeuH9PQTbjfkOg" source="_N3JVwJVZEeuH9PQTbjfkOg" target="_a0WWkJVaEeuH9PQTbjfkOg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_RpfUEJVbEeuH9PQTbjfkOg" source="_PXfHIJVZEeuH9PQTbjfkOg" target="_a0WWkJVaEeuH9PQTbjfkOg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_89uwsJWcEeues40cYyceuQ" source="_5sg3kJWcEeues40cYyceuQ" target="_a0WWkJVaEeuH9PQTbjfkOg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_3JiIAJWdEeues40cYyceuQ" name="No previous offence, NOT 3rd party involvement" source="_xgFy4JVTEeuH9PQTbjfkOg" target="_ebX54JVVEeuH9PQTbjfkOg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_4_MpIJWdEeues40cYyceuQ" name="Previous offences" source="_xgFy4JVTEeuH9PQTbjfkOg" target="_g4mQ0JWCEeues40cYyceuQ"/>
+      <transition xmi:type="uml:Transition" xmi:id="_Np9A8JWeEeues40cYyceuQ" source="_xgFy4JVTEeuH9PQTbjfkOg" target="_b0mXMJWdEeues40cYyceuQ"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_nVwVkJVCEeuH9PQTbjfkOg"/>
+      <subvertex xmi:type="uml:State" xmi:id="_o8JOIJVOEeuH9PQTbjfkOg" name="Standard">
+        <region xmi:type="uml:Region" xmi:id="_0RRTUZVOEeuH9PQTbjfkOg" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_y11eMJWdEeues40cYyceuQ" source="_wlwhUJVCEeuH9PQTbjfkOg" target="_xgFy4JVTEeuH9PQTbjfkOg"/>
+          <subvertex xmi:type="uml:State" xmi:id="_wlwhUJVCEeuH9PQTbjfkOg" name="Assesment">
+            <doActivity xmi:type="uml:Activity" xmi:id="_SK54sJVTEeuH9PQTbjfkOg" name="Suspect misconduct"/>
+            <entry xmi:type="uml:Activity" xmi:id="_OEZ9YJVTEeuH9PQTbjfkOg" name="Provide report"/>
+            <exit xmi:type="uml:Activity" xmi:id="_YudsUJVTEeuH9PQTbjfkOg" name="Verify prior offences"/>
+          </subvertex>
+        </region>
+      </subvertex>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_xgFy4JVTEeuH9PQTbjfkOg" name="Decision Node" kind="choice"/>
+      <subvertex xmi:type="uml:State" xmi:id="_7Wt5wJVTEeuH9PQTbjfkOg" name="Process1">
+        <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_PXfHIJVZEeuH9PQTbjfkOg" name="ExitPoint" kind="exitPoint"/>
+        <region xmi:type="uml:Region" xmi:id="_Joq8cpVUEeuH9PQTbjfkOg" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_s8g0sJbtEeuDpMuSdWSGZQ" source="_1bGeoJVNEeuH9PQTbjfkOg" target="_Wa0oAJVOEeuH9PQTbjfkOg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_trMfoJbtEeuDpMuSdWSGZQ" source="_Wa0oAJVOEeuH9PQTbjfkOg" target="_PXfHIJVZEeuH9PQTbjfkOg"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1bGeoJVNEeuH9PQTbjfkOg" name="Interview">
+            <doActivity xmi:type="uml:Activity" xmi:id="_3oiUoJVPEeuH9PQTbjfkOg" name="Record"/>
+            <entry xmi:type="uml:Activity" xmi:id="_r-kn4JVPEeuH9PQTbjfkOg" name="Attendance" visibility="package"/>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_Wa0oAJVOEeuH9PQTbjfkOg" name="Hearing">
+            <doActivity xmi:type="uml:Activity" xmi:id="_K42uwJVQEeuH9PQTbjfkOg" name="Complete hearing"/>
+            <entry xmi:type="uml:Activity" xmi:id="_FhjS4JVQEeuH9PQTbjfkOg" name="Receive case"/>
+          </subvertex>
+        </region>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_ebX54JVVEeuH9PQTbjfkOg" name="Process2">
+        <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_N3JVwJVZEeuH9PQTbjfkOg" name="ExitPoint" kind="exitPoint"/>
+        <region xmi:type="uml:Region" xmi:id="_gOLUQpVVEeuH9PQTbjfkOg" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_Yt2PAJVYEeuH9PQTbjfkOg" name="Case of misconduct" source="_bmxZYJVXEeuH9PQTbjfkOg" target="_rWy8kJVXEeuH9PQTbjfkOg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_OnuBoJVaEeuH9PQTbjfkOg" name="Referral" source="_bmxZYJVXEeuH9PQTbjfkOg" target="_AkQY0JVYEeuH9PQTbjfkOg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_uvz_cJVaEeuH9PQTbjfkOg" name="Poor academic practice" source="_bmxZYJVXEeuH9PQTbjfkOg" target="_EhS2IJVYEeuH9PQTbjfkOg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_HRmTMJVbEeuH9PQTbjfkOg" name="No case" source="_bmxZYJVXEeuH9PQTbjfkOg" target="_N3JVwJVZEeuH9PQTbjfkOg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_NzD1EJVbEeuH9PQTbjfkOg" source="_rWy8kJVXEeuH9PQTbjfkOg" target="_N3JVwJVZEeuH9PQTbjfkOg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_OkpqEJVbEeuH9PQTbjfkOg" source="_AkQY0JVYEeuH9PQTbjfkOg" target="_N3JVwJVZEeuH9PQTbjfkOg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_PLSMQJVbEeuH9PQTbjfkOg" source="_EhS2IJVYEeuH9PQTbjfkOg" target="_N3JVwJVZEeuH9PQTbjfkOg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_vELEwJbtEeuDpMuSdWSGZQ" source="_cCYMwJVWEeuH9PQTbjfkOg" target="_bmxZYJVXEeuH9PQTbjfkOg"/>
+          <subvertex xmi:type="uml:State" xmi:id="_cCYMwJVWEeuH9PQTbjfkOg" name="LAMP">
+            <doActivity xmi:type="uml:Activity" xmi:id="_uvdW8JVWEeuH9PQTbjfkOg" name="Record"/>
+            <entry xmi:type="uml:Activity" xmi:id="_oMvQ0JVWEeuH9PQTbjfkOg" visibility="package"/>
+            <exit xmi:type="uml:Activity" xmi:id="_7ew7IJVWEeuH9PQTbjfkOg" name="Decide result"/>
+          </subvertex>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_bmxZYJVXEeuH9PQTbjfkOg" name="Fork" kind="fork"/>
+          <subvertex xmi:type="uml:State" xmi:id="_rWy8kJVXEeuH9PQTbjfkOg" name="Form">
+            <doActivity xmi:type="uml:Activity" xmi:id="_xFPQoJVYEeuH9PQTbjfkOg" name="Check"/>
+            <entry xmi:type="uml:Activity" xmi:id="_rFkNMJVYEeuH9PQTbjfkOg" name="Sign"/>
+            <exit xmi:type="uml:Activity" xmi:id="_9SnMcJVYEeuH9PQTbjfkOg" name="Send copy"/>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_AkQY0JVYEeuH9PQTbjfkOg" name="SCO">
+            <doActivity xmi:type="uml:Activity" xmi:id="_aRv1QJVZEeuH9PQTbjfkOg" name="Referral form"/>
+            <entry xmi:type="uml:Activity" xmi:id="_Zq7F0JVZEeuH9PQTbjfkOg" name="Description"/>
+            <exit xmi:type="uml:Activity" xmi:id="_a093EJVZEeuH9PQTbjfkOg" name="Outcome"/>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_EhS2IJVYEeuH9PQTbjfkOg" name="Registration">
+            <doActivity xmi:type="uml:Activity" xmi:id="_UBlpUJVaEeuH9PQTbjfkOg" name="No action"/>
+          </subvertex>
+        </region>
+      </subvertex>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_a0WWkJVaEeuH9PQTbjfkOg" name="Case Closed"/>
+      <subvertex xmi:type="uml:State" xmi:id="_g4mQ0JWCEeues40cYyceuQ" name="Process3">
+        <connectionPoint xmi:type="uml:Pseudostate" xmi:id="_5sg3kJWcEeues40cYyceuQ" name="ExitPoint" kind="exitPoint"/>
+        <region xmi:type="uml:Region" xmi:id="_rd8e4JWCEeues40cYyceuQ" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_dSK94JWcEeues40cYyceuQ" source="_yoCtEJWNEeues40cYyceuQ" target="_iQck0JWTEeues40cYyceuQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_wWyeUJWcEeues40cYyceuQ" source="_iQck0JWTEeues40cYyceuQ" target="_-54JwJWbEeues40cYyceuQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_8AqrgJWcEeues40cYyceuQ" source="_-54JwJWbEeues40cYyceuQ" target="_5sg3kJWcEeues40cYyceuQ"/>
+          <transition xmi:type="uml:Transition" xmi:id="_ZN24wJbtEeuDpMuSdWSGZQ" source="_AwbgkJbtEeuDpMuSdWSGZQ" target="_yoCtEJWNEeues40cYyceuQ"/>
+          <subvertex xmi:type="uml:State" xmi:id="_yoCtEJWNEeues40cYyceuQ" name="SCO">
+            <entry xmi:type="uml:Activity" xmi:id="_idUVcJWOEeues40cYyceuQ" name="Receive case"/>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_iQck0JWTEeues40cYyceuQ" name="Hearing">
+            <entry xmi:type="uml:Activity" xmi:id="_i4XxYJWcEeues40cYyceuQ" name="Schedule"/>
+            <exit xmi:type="uml:Activity" xmi:id="_lo28AJWcEeues40cYyceuQ" name="Send Outcome"/>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_-54JwJWbEeues40cYyceuQ" name="ProfessionalServiceTeam">
+            <doActivity xmi:type="uml:Activity" xmi:id="_aThbcJWcEeues40cYyceuQ" name="Analyze"/>
+            <exit xmi:type="uml:Activity" xmi:id="_rPJPEJWcEeues40cYyceuQ" name="Register case"/>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_AwbgkJbtEeuDpMuSdWSGZQ" name="Case">
+            <doActivity xmi:type="uml:Activity" xmi:id="_EOQSUJbtEeuDpMuSdWSGZQ" name="Complete referral"/>
+            <entry xmi:type="uml:Activity" xmi:id="_DfDC8JbtEeuDpMuSdWSGZQ" name="Send email"/>
+            <exit xmi:type="uml:Activity" xmi:id="_EsuXAJbtEeuDpMuSdWSGZQ" name="Send case"/>
+          </subvertex>
+        </region>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_b0mXMJWdEeues40cYyceuQ" name="Process4">
+        <region xmi:type="uml:Region" xmi:id="_dm-TwJWdEeues40cYyceuQ" name="Region1">
+          <subvertex xmi:type="uml:FinalState" xmi:id="_YK53MJWeEeues40cYyceuQ" name="Case Dropped"/>
+        </region>
+      </subvertex>
+    </region>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_M1yncJVOEeuH9PQTbjfkOg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_M1zOgJVOEeuH9PQTbjfkOg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
